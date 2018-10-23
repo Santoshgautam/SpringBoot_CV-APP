@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>CV</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css" />
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-center"><p th:text="${firstName + ' CV Details'}" /></h3>
+			</div>
+			<div id="no-more-tables">
+				<table
+					class="col-md-12 table-bordered table-striped table-condensed cf">
+					<thead class="cf">
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Country</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-title="firstname"><p th:text="${firstName}" /></td>
+							<td data-title="lastname"><p th:text="${lastName}" /></td>
+							<td data-title="country"><p th:text="${country}" /></td>
+							<td data-title="date"><p th:text="${date}" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br/>
+			<br/>
+			<embed src="CV.pdf" width="1170px" height="5000px" />
+		</div>
+	</div>
+</body>
+</html>
